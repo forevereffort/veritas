@@ -1953,3 +1953,52 @@ main {
   }
 }
 // END - Tein added contact form styling 13Jan2023 (KK modified 13Jan)
+
+.fixedBtn{
+  position: fixed;
+  z-index: 97;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 0;
+
+  .buttonWithArrowStyling{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.fixedBtn__row{
+  position: relative;
+}
+
+.fixedBtn__inner{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  &:hover{
+
+    .fixedBtn__hover{
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.fixedBtn__item+.fixedBtn__item{
+  margin-top: 6px;
+}
+
+.fixedBtn__normal{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.fixedBtn__hover{
+  opacity: 0;
+  visibility: hidden;
+}
