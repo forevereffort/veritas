@@ -2200,3 +2200,43 @@ main {
     margin-top: 30px;
   }
 }
+
+.single-article-detail__treat-txt-link{
+  margin-top: 30px;
+
+  a{
+    color: #FF4336;
+  }
+}
+
+.single-article-detail__min-txt{
+
+  h3+p{
+    margin-top: 30px;
+  }
+
+  h4{
+    font-size: pxToRem(20, 20);
+    line-height: 1.35;
+    font-weight: 500;
+    color: #635651;
+    font-family: 'PP Neue Montreal Variable';
+  }
+
+  h4+p{
+    margin-top: 30px;
+  }
+
+  img{
+    max-width: 100%;
+    border-radius: 0.5rem;
+  }
+
+  p+img{
+    margin-top: 30px;
+  }
+
+  img+h4{
+    margin-top: 30px;
+  }
+}
