@@ -2136,3 +2136,11 @@ main {
 .grid-list__group+.grid-list__group{
   margin-top: 160px;
 }
+
+.single-concern__img{
+
+  img{
+    max-width: 100%;
+    border-radius: 0.5rem;
+  }
+}
