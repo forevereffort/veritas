@@ -742,5 +742,9 @@ $(document).ready(function () {
   }
   // END Tein added 13Jan2023  
 
+  $('.faq-list__title').click(function(){
+    $('.faq-list__txt', $(this).parent()).slideDown();
+  })
+
   $('body').addClass('ready');
 });
