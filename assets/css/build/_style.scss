@@ -2096,3 +2096,43 @@ main {
     margin-top: 30px;
   }
 }
+
+.grid-list__card-img{
+
+  img{
+    max-width: 100%;
+    border-radius: 0.5rem;
+  }
+}
+
+.grid-list__tite{
+
+  h2{
+    display: inline-block;
+    position: relative;
+    padding-right: 56px;
+    user-select: none;
+    cursor: pointer;
+
+    &::after{
+      position: absolute;
+      content: '';
+      width: 26px;
+      height: 15px;
+      background-image: url("../media/big-arrow.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      top: 50%;
+      margin-top: -8px;
+      right: 0;
+    }
+  }
+}
+
+.grid-list__row{
+  margin-top: 42px;
+}
+
+.grid-list__group+.grid-list__group{
+  margin-top: 160px;
+}
