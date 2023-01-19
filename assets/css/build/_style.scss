@@ -2051,3 +2051,48 @@ main {
     transform: translateX(-100%);
   }
 }
+
+.clinic-features__row{
+  display: flex;
+  margin: 40px -25px 0;
+}
+
+.clinic-features__col{
+  padding: 0 25px;
+  display: flex;
+  align-items: center;
+
+  p{
+    margin-left: 16px;
+  }
+}
+
+.insights__card-img{
+  
+  img{
+    border-radius: 0.5rem;
+    max-width: 100%;
+  }
+}
+
+.insights__card-name{
+  margin-top: 12px;
+  color: #A19B97;
+}
+
+.insights__card-info{
+  margin-top: 16px;
+  color: #A19B97;
+}
+
+.insights__wrapper{
+  margin-top: 30px;
+}
+
+.insights__right-col{
+  margin-top: -30px;
+
+  .md-6{
+    margin-top: 30px;
+  }
+}
