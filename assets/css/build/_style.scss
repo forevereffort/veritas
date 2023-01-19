@@ -2262,3 +2262,43 @@ main {
 .faq-list__txt{
   margin-top: 20px;
 }
+
+.faq-list__title{
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+
+  &.open{
+
+    &::before{
+      transform: rotate(180deg);
+    }
+
+    &::after{
+      transform: rotate(180deg);
+      opacity: 0;
+    }
+  }
+
+  &::before{
+    position: absolute;
+    right: 0;
+    top: 12px;
+    content: '';
+    width: 16px;
+    height: 2px;
+    background-color: #A19B97;
+    transition: transform 0.2s ease-out;
+  }
+
+  &::after{
+    position: absolute;
+    right: 7px;
+    top: 6px;
+    content: '';
+    width: 2px;
+    height: 16px;
+    background-color: #A19B97;
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  }
+}
