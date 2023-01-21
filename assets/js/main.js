@@ -759,22 +759,35 @@ $(document).ready(function () {
 
   // insights sticky
   if( $('#insights__card--sticky').length > 0 ){
-    const p = $('#insights__card--sticky').position();
+    const p = $('#insights__card--sticky').offset();
     const offsetX = 30;
 
     $(window).on('scroll', function(){
       if( window.innerWidth > 1280 ){
         var w = $('#insights__card--sticky').parent().width();
+        var h = $('#insights__card--sticky').height();
+        var sh = $('#insights-section').height();
+        var sp = $('#insights-section').offset()
 
-        if( $(window).scrollTop() + offsetX > p.top){
-          $('#insights__card--sticky').css({
-            "position": "fixed",
-            "top": offsetX + 'px',
-            "left": p.left + 'px',
-            "width": w + 'px'
-          })
+        if( $(window).scrollTop() + offsetX > p.top ){
+          if( $(window).scrollTop() + h > sh + sp.top ){
+            $('#insights__card--sticky').css({
+              "position": "absolute",
+              "top": 'auto',
+              "bottom": '0',
+              "left": '15px',
+              "width": w + 'px'
+            });
+          } else {
+            $('#insights__card--sticky').css({
+              "position": "fixed",
+              "top": offsetX + 'px',
+              "bottom": 'auto',
+              "left": p.left + 'px',
+              "width": w + 'px'
+            });
+          }
         } else {
-          console.log(123);
           $('#insights__card--sticky').removeAttr('style');
         }
       }

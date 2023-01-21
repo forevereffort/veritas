@@ -2120,6 +2120,10 @@ main {
 
 .insights__wrapper{
   margin-top: 30px;
+
+  .lg-6{
+    position: relative;
+  }
 }
 
 .insights__right-col{
@@ -2137,6 +2141,14 @@ main {
     .md-6+.md-6{
       margin-top: 30px;
     }
+  }
+}
+
+#insights__card--sticky{
+
+  @include bp(maxMDLG){
+    position: static !important;
+    width: auto !important;
   }
 }
 
