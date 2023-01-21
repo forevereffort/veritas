@@ -742,6 +742,7 @@ $(document).ready(function () {
   }
   // END Tein added 13Jan2023  
 
+  // get in touch fixed button hover animation
   $('.fixedBtn__normal').on('mouseenter', function(){
     if( $('.fixedBtn__inner').hasClass('fixedBtn__inner--hidden') ){
       $('.fixedBtn__inner').removeClass('fixedBtn__inner--hidden');
@@ -756,7 +757,31 @@ $(document).ready(function () {
     }
   })
 
-  $('.faq-list__title').click(function(){
+  // insights sticky
+  if( $('#insights__card--sticky').length > 0 ){
+    const p = $('#insights__card--sticky').position();
+    const offsetX = 30;
+
+    $(window).on('scroll', function(){
+      if( window.innerWidth > 1280 ){
+        var w = $('#insights__card--sticky').parent().width();
+
+        if( $(window).scrollTop() + offsetX > p.top){
+          $('#insights__card--sticky').css({
+            "position": "fixed",
+            "top": offsetX + 'px',
+            "left": p.left + 'px',
+            "width": w + 'px'
+          })
+        } else {
+          console.log(123);
+          $('#insights__card--sticky').removeAttr('style');
+        }
+      }
+    });
+  }
+
+  $('.faq-list__title').on('click', function(){
     if( $(this).hasClass('open') ){
       $('.faq-list__txt', $(this).parent()).slideUp();
       $(this).removeClass('open')
