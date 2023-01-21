@@ -2023,7 +2023,7 @@ main {
 .logo-list__marquee {
   margin-top: 30px;
   align-items: center;
-  animation: logoListScroll 60s linear 0s infinite;
+  animation: logoListScroll 140s linear 0s infinite;
   animation-delay: 0;
   animation-direction: normal;
   animation-play-state: running;
@@ -2032,6 +2032,10 @@ main {
   flex-direction: row;
   min-width: 100%;
   z-index: 1;
+}
+
+.logo-list__marquee--pause{
+  animation-play-state: paused;
 }
 
 .logo-list__row{

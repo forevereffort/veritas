@@ -799,6 +799,13 @@ $(document).ready(function () {
     });
   }
 
+  //logo list hover stop
+  $('.logo-list__item a').on('mouseenter', function(){
+    $('.logo-list__marquee').addClass('logo-list__marquee--pause');
+  }).on('mouseleave', function(){
+    $('.logo-list__marquee').removeClass('logo-list__marquee--pause');
+  })
+
   $('.faq-list__title').on('click', function(){
     if( $(this).hasClass('open') ){
       $('.faq-list__txt', $(this).parent()).slideUp();
