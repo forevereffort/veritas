@@ -742,6 +742,20 @@ $(document).ready(function () {
   }
   // END Tein added 13Jan2023  
 
+  $('.fixedBtn__normal').on('mouseenter', function(){
+    if( $('.fixedBtn__inner').hasClass('fixedBtn__inner--hidden') ){
+      $('.fixedBtn__inner').removeClass('fixedBtn__inner--hidden');
+      $('.fixedBtn__inner').addClass('fixedBtn__inner--open');
+    }
+  })
+
+  $('.fixedBtn__inner').on('mouseleave', function(){
+    if( $(this).hasClass('fixedBtn__inner--open') ){
+      $('.fixedBtn__inner').removeClass('fixedBtn__inner--open');
+      $('.fixedBtn__inner').addClass('fixedBtn__inner--hidden');
+    }
+  })
+
   $('.faq-list__title').click(function(){
     if( $(this).hasClass('open') ){
       $('.faq-list__txt', $(this).parent()).slideUp();

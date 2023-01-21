@@ -1974,17 +1974,10 @@ main {
 }
 
 .fixedBtn__inner{
+  overflow: hidden;
   position: absolute;
   right: 0;
   bottom: 0;
-
-  &:hover{
-
-    .fixedBtn__hover{
-      opacity: 1;
-      visibility: visible;
-    }
-  }
 }
 
 .fixedBtn__item+.fixedBtn__item{
@@ -1996,11 +1989,35 @@ main {
   bottom: 0;
   left: 0;
   right: 0;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: transform 0.5s ease-out, visibility 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.fixedBtn__inner--open{
+
+  .fixedBtn__normal{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+  }
+}
+
+.fixedBtn__inner--hidden{
+
+  .fixedBtn__hover{
+    transform: translateY(100%);
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 
 .fixedBtn__hover{
-  opacity: 0;
-  visibility: hidden;
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+  transition: transform 0.5s ease-out, visibility 0.5s ease-out, opacity 0.5s ease-out;
 }
 
 .logo-list__marquee {
