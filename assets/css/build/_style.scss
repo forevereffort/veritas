@@ -2177,6 +2177,10 @@ main {
   }
 }
 
+.grid-list__card-title{
+  margin-top: 9px;
+}
+
 .grid-list__tite{
 
   h2{
@@ -2194,9 +2198,23 @@ main {
       background-image: url("../media/big-arrow.svg");
       background-position: center;
       background-repeat: no-repeat;
+      background-size: contain;
       top: 50%;
       margin-top: -8px;
       right: 0;
+    }
+  }
+
+  @include bp(maxMD){
+
+    h2{
+      padding-right: 30px;
+
+      &::after{
+        width: 12px;
+        height: 8px;
+        margin-top: -4px;
+      }
     }
   }
 }
@@ -2207,6 +2225,10 @@ main {
 
 .grid-list__group+.grid-list__group{
   margin-top: 160px;
+
+  @include bp(maxMD){
+    margin-top: 50px;
+  }
 }
 
 .single-concern__img{
