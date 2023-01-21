@@ -2381,6 +2381,10 @@ main {
   user-select: none;
   cursor: pointer;
 
+  p{
+    font-weight: 600;
+  }
+
   &.open{
 
     &::before{
