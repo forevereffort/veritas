@@ -2123,9 +2123,8 @@ main {
 }
 
 .insights__right-col{
-  margin-top: -30px;
 
-  .md-6{
+  .insights__card+.insights__card{
     margin-top: 30px;
   }
 }
