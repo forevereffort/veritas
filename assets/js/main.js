@@ -759,7 +759,12 @@ $(document).ready(function () {
 
   // insights sticky
   if( $('#insights__card--sticky').length > 0 ){
-    const p = $('#insights__card--sticky').offset();
+    let p = $('#insights__card--sticky').offset();
+
+    $(window).on('resize', function(){
+      p = $('#insights__card--sticky').offset();
+    });
+
     const offsetX = 30;
 
     $(window).on('scroll', function(){
