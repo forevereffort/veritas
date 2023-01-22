@@ -2419,3 +2419,43 @@ main {
     transition: transform 0.2s ease-out, opacity 0.2s ease-out;
   }
 }
+
+.bigimg-info__info{
+
+  .s{
+    color: #FF4336;
+  }
+
+  small{
+    margin-top: 16px;
+    color: #A19B97;
+  }
+}
+
+.bigimg-info__info{
+ 
+  @include bp(maxSM) {
+    margin-top: 20px;
+  }
+}
+
+.card-grid__card-info{
+  margin-top: 12px;
+
+  .s{
+    color: #A19B97;
+  }
+
+  small{
+    margin-top: 6px;
+    color: #A19B97;
+  }
+}
+
+.card-grid__card-link{
+  margin-top: 12px;
+
+  a{
+    color: #FF4336;
+  }
+}
