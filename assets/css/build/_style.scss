@@ -2460,6 +2460,22 @@ main {
   }
 }
 
+.card-grid__btn{
+  background: none;
+  border: 0;
+  padding: 0;
+  margin-top: 100px;
+  cursor: pointer;
+
+  p{
+    color: #A19B97;
+  }
+}
+
+.card-grid__btn-wrapper{
+  text-align: center;
+}
+
 .our-doctor__row{
   margin-top: 18px;
 }
