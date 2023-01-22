@@ -2459,3 +2459,28 @@ main {
     color: #FF4336;
   }
 }
+
+.our-doctor__row{
+  margin-top: 18px;
+}
+
+.our-doctor__card-info{
+
+  li{
+    color: #635651;
+
+    &::before{
+      width: 0.25rem;
+      height: 0.25rem;
+      background-image: none;
+      background-color: #635651;
+      border-radius: 50%;
+      margin: 0.5rem 10px 0 0;
+      display: inline-block;
+    }
+  }
+
+  @include bp(maxMD){
+    margin-top: 18px;
+  }
+}
