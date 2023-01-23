@@ -2516,3 +2516,36 @@ main {
 .single-article__title{
   color: #635651;
 }
+
+.single-article__content{
+
+  h3{
+    color: #635651;
+  }
+
+  figure{
+    margin: 0;
+
+    img{
+      max-width: 100%;
+    }
+  }
+
+  figcaption{
+    font-size: pxToRem(14, 20);
+    line-height: 1.4;
+    letter-spacing: pxToRem(0.08, 20);
+  }
+
+  *+p{
+    margin-top: 30px;
+  }
+  
+  *+h3{
+    margin-top: 30px;
+  }
+  
+  *+figure{
+    margin-top: 30px;
+  }
+}
