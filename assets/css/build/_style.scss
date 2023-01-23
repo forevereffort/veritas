@@ -2575,3 +2575,49 @@ main {
     margin-top: 30px;
   }
 }
+
+.module-anchor-title{
+
+  p{
+    color: #A19B97;
+  }
+
+  h3{
+    color: #635651;
+  }
+}
+
+.module-content{
+
+  h3{
+    color: #635651;
+  }
+
+  *+p{
+    margin-top: 30px;
+  }
+
+  ul{
+
+    li{
+      margin-top: 30px;
+    }
+  }
+
+  ol{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+
+    li{
+      font-size: pxToRem(12, 20);
+      line-height: 1.2;
+      color: #A19B97;
+
+      &::before{
+        text-align: left;
+        margin: 0;
+      }
+    }
+  }
+}
