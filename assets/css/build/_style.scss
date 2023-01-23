@@ -2723,3 +2723,12 @@ main {
     margin: 20px 20px 0 0;
   }
 }
+
+.module-share__row{
+  display: flex;
+  margin-top: 20px;
+}
+
+.module-share__item+.module-share__item{
+  margin-left: 20px;
+}
