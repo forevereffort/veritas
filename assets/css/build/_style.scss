@@ -2774,3 +2774,41 @@ main {
     color: #FF4336;
   }
 }
+
+.module-2-col-img-txt__card-info{
+
+  @include bp(maxMD){
+    margin-top: 30px;
+  }
+}
+
+.module-key__row{
+  margin: 28px -25px 0;
+
+  @include bp(minMD) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.module-key__col{
+  padding: 12px 25px;
+  display: flex;
+  align-items: center;
+
+  p{
+    margin-left: 16px;
+  }
+
+  @include bp(maxSM) {
+    display: grid;
+    grid-template-columns: 28px 1fr;
+  }
+}
+
+.module-key__icon{
+
+  img{
+    max-width: 100%;
+  }
+}
