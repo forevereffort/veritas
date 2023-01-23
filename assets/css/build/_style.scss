@@ -2376,65 +2376,6 @@ main {
   color: #635651;
 }
 
-.single-article__content{
-
-  h3{
-    color: #635651;
-  }
-
-  figure{
-    margin: 0;
-
-    img{
-      max-width: 100%;
-    }
-  }
-
-  figcaption{
-    font-size: pxToRem(14, 20);
-    line-height: 1.4;
-    letter-spacing: pxToRem(0.08, 20);
-  }
-
-  *+p{
-    margin-top: 30px;
-  }
-  
-  *+h3{
-    margin-top: 30px;
-  }
-  
-  *+figure{
-    margin-top: 30px;
-  }
-
-  li{
-    display: block;
-    position: relative;
-    padding-left: 30px;
-
-    &::before{
-      position: absolute;
-      left: 0;
-      top: 10px;
-      background: none;
-      margin: 0;
-      width: 0.3rem;
-      height: 0.3rem;
-      border-radius: 50%;
-      background-color: #26211D;
-    }
-  }
-
-  *+ul{
-    margin: 30px 0 0 0;
-  }
-
-  li+li{
-    margin-top: 30px;
-  }
-}
-
 .module-anchor-title{
 
   p{
@@ -2453,6 +2394,10 @@ main {
   }
 
   *+p{
+    margin-top: 30px;
+  }
+  
+  *+h3{
     margin-top: 30px;
   }
 
@@ -2638,6 +2583,10 @@ main {
 
   p+p{
     margin-top: 30px;
+  }
+  
+  a{
+    color: #FF4336;
   }
 
   @include bp(maxMD){
