@@ -2258,110 +2258,6 @@ main {
   }
 }
 
-.single-article-detail{
-  border-bottom: 1px solid #A19B97;
-  padding-bottom: 50px;
-}
-
-.single-article-detail__title{
-
-  p{
-    color: #A19B97;
-  }
-}
-
-.single-article-detail__list{
-  margin-top: 50px;
-
-  h3{
-    font-size: pxToRem(20, 20);
-    line-height: 1.35;
-    font-weight: 500;
-    color: #635651;
-  }
-
-  p~h3{
-    margin-top: 30px;
-  }
-}
-
-.single-article-detail__p{
-
-  p+p{
-    margin-top: 30px;
-  }
-  
-  @include bp(maxSM) {
-    margin-top: 30px;
-  }
-}
-
-.single-article-detail--has-pt{
-  padding-top: 50px;
-}
-
-.single-article-detail__treat{
-  margin-top: 50px;
-}
-
-.single-article-detail__treat-txt{
-  
-  h3{
-    font-size: pxToRem(20, 20);
-    line-height: 1.35;
-    font-weight: 500;
-    color: #635651;
-  }
-
-  p+p{
-    margin-top: 30px;
-  }
-
-  @include bp(maxSM) {
-    margin-top: 30px;
-  }
-}
-
-.single-article-detail__treat-txt-link{
-  margin-top: 30px;
-
-  a{
-    color: #FF4336;
-  }
-}
-
-.single-article-detail__min-txt{
-
-  h3+p{
-    margin-top: 30px;
-  }
-
-  h4{
-    font-size: pxToRem(20, 20);
-    line-height: 1.35;
-    font-weight: 500;
-    color: #635651;
-    font-family: 'PP Neue Montreal Variable';
-  }
-
-  h4+p{
-    margin-top: 30px;
-  }
-
-  img{
-    max-width: 100%;
-    border-radius: 0.5rem;
-  }
-
-  p+img{
-    margin-top: 30px;
-  }
-
-  img+h4{
-    margin-top: 30px;
-  }
-}
-
 .faq-list{
   margin-top: 36px;
   border-top: 1px solid #A19B97;
@@ -2474,43 +2370,6 @@ main {
 
 .card-grid__btn-wrapper{
   text-align: center;
-}
-
-.our-doctor__row{
-  margin-top: 18px;
-}
-
-.our-doctor__card-info{
-
-  li{
-    color: #635651;
-
-    &::before{
-      width: 0.25rem;
-      height: 0.25rem;
-      background-image: none;
-      background-color: #635651;
-      border-radius: 50%;
-      margin: 0.5rem 10px 0 0;
-      display: inline-block;
-    }
-  }
-
-  @include bp(maxMD){
-    margin-top: 18px;
-  }
-}
-
-.single-article-detail__video{
-  margin-top: 50px;
-
-  p+p{
-    margin-top: 30px;
-  }
-}
-
-.single-article-detail__video-img{
-  margin-top: 30px;
 }
 
 .single-article__title{
@@ -2777,6 +2636,10 @@ main {
 
 .module-2-col-img-txt__card-info{
 
+  p+p{
+    margin-top: 30px;
+  }
+
   @include bp(maxMD){
     margin-top: 30px;
   }
@@ -2811,4 +2674,8 @@ main {
   img{
     max-width: 100%;
   }
+}
+
+.our-doctor__title{
+  margin-bottom: 20px;
 }
