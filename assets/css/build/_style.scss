@@ -2605,6 +2605,10 @@ main {
     }
   }
 
+  *+ul{
+    margin-top: 30px;
+  }
+
   ol{
     margin: 0;
     list-style: none;
@@ -2620,6 +2624,10 @@ main {
         margin: 0;
       }
     }
+  }
+
+  a{
+    color: #FF4336;
   }
 }
 
@@ -2731,4 +2739,38 @@ main {
 
 .module-share__item+.module-share__item{
   margin-left: 20px;
+}
+
+.module-2-col-img-txt__wrapper{
+  margin-top: 20px;
+}
+
+.module-2-col-img-txt__card{
+  
+  ul{
+
+    li{
+
+      &::before{
+        background-image: none;
+        margin: 0.6rem 15px 0 0;
+        width: 0.2rem;
+        height: 0.2rem;
+        border-radius: 50%;
+        background-color: #26211D;
+      }
+    }
+  }
+}
+
+.module-2-col-img-txt__card+.module-2-col-img-txt__card{
+  margin-top: 45px;
+}
+
+.module-2-col-img-txt__card-link{
+  margin-top: 30px;
+
+  a{
+    color: #FF4336;
+  }
 }
