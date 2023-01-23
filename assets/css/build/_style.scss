@@ -2687,3 +2687,25 @@ main {
     letter-spacing: pxToRem(0.08, 20);
   }
 }
+
+.module-3-col-txt__info{
+  margin-top: 8px;
+
+  small{
+    color: #A19B97;
+  }
+
+  h4{
+    font-size: pxToRem(24, 20);
+    font-family: "PP Neue Montreal Variable";
+    color: #635651;
+  }
+
+  p{
+    margin-top: 12px;
+  }
+}
+
+.module-3-col-txt__wrapper{
+  margin-top: 30px;
+}
