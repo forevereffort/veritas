@@ -2146,6 +2146,20 @@ main {
   .lg-6{
     position: relative;
   }
+
+  @include bp(maxMD) {
+    
+    .desk{
+      display: none;
+    }
+  }
+
+  @include bp(minMDLG) {
+    
+    .mob{
+      display: none;
+    }
+  }
 }
 
 .insights__right-col{
@@ -2157,7 +2171,7 @@ main {
   @include bp(maxMDLG){
     margin-top: 30px;
   }
-  
+
   @include bp(maxSM){
     
     .md-6+.md-6{
@@ -2171,6 +2185,14 @@ main {
   @include bp(maxMDLG){
     position: static !important;
     width: auto !important;
+  }
+}
+
+.insights__link{
+  margin-top: 30px;
+
+  a{
+    color: #ff4336;
   }
 }
 
