@@ -2321,6 +2321,13 @@ main {
   }
 }
 
+.bigimg-info{
+
+  @include bp(maxSM){
+    margin-bottom: 35px;
+  }
+}
+
 .bigimg-info__info{
 
   .s{
