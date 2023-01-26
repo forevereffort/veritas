@@ -2593,6 +2593,14 @@ main {
   
   a{
     color: #FF4336;
+
+    @include bp(minLG){
+      transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+      
+      &:hover{
+        filter: opacity(40%);
+      }
+    }
   }
 
   @include bp(maxMD){
