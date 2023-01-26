@@ -2547,6 +2547,16 @@ main {
   margin-top: 20px;
 }
 
+.module-share__item{
+  @include bp(minLG){
+    transition: filter .3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover{
+      filter: opacity(40%);
+    }
+  }
+}
+
 .module-share__item+.module-share__item{
   margin-left: 20px;
 }
@@ -2596,7 +2606,7 @@ main {
 
     @include bp(minLG){
       transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
-      
+
       &:hover{
         filter: opacity(40%);
       }
