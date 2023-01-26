@@ -2196,6 +2196,10 @@ main {
   }
 }
 
+.grid-list{
+  margin-top: -100px;
+}
+
 .grid-list__card-img{
 
   img{
@@ -2256,11 +2260,14 @@ main {
   }
 }
 
+.grid-list__group{
+  padding-top: 100px;
+}
+
 .grid-list__group+.grid-list__group{
-  margin-top: 100px;
 
   @include bp(maxMD){
-    margin-top: 50px;
+    padding-top: 50px;
   }
 }
 

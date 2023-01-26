@@ -825,7 +825,7 @@ $(document).ready(function () {
   });
 
   // check default open at concerns.html
-  if( window.location.pathname === '/concerns.html' ){
+  if( window.location.pathname === '/concerns.html' || window.location.pathname === '/treatments.html' ){
     let defaultSection = window.location.hash.substr(1);
 
     if( defaultSection !== '' ){
