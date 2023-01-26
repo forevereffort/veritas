@@ -821,6 +821,22 @@ $(document).ready(function () {
     }
   });
 
+  // check default open at concerns.html
+  if( window.location.pathname === '/concerns.html' ){
+    let defaultSection = window.location.hash.substr(1);
+
+    if( defaultSection !== '' ){
+      jQuery('.grid-list__group').addClass('grid-list__group--closed');
+      jQuery('.grid-list__group .grid-list__row').css({'display': 'none'});
+      jQuery('.grid-list__group[data-grid-cat="' + defaultSection + '"]').removeClass('grid-list__group--closed');
+      jQuery('.grid-list__group[data-grid-cat="' + defaultSection + '"] .grid-list__row').removeAttr('style');
+
+      $('html, body').animate({
+        scrollTop: $('#' + defaultSection).offset().top
+      }, 500);
+    }
+  }
+
   $('.faq-list__title').on('click', function(){
     if( $(this).hasClass('open') ){
       $('.faq-list__txt', $(this).parent()).slideUp();
