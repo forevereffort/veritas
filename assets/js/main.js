@@ -743,19 +743,22 @@ $(document).ready(function () {
   // END Tein added 13Jan2023  
 
   // get in touch fixed button hover animation
-  $('.fixedBtn__normal').on('mouseenter', function(){
+  $('.fixedBtn__normal').on('click', function(){
     if( $('.fixedBtn__inner').hasClass('fixedBtn__inner--hidden') ){
       $('.fixedBtn__inner').removeClass('fixedBtn__inner--hidden');
       $('.fixedBtn__inner').addClass('fixedBtn__inner--open');
-    }
-  })
-
-  $('.fixedBtn__inner').on('mouseleave', function(){
-    if( $(this).hasClass('fixedBtn__inner--open') ){
+    } else {
       $('.fixedBtn__inner').removeClass('fixedBtn__inner--open');
       $('.fixedBtn__inner').addClass('fixedBtn__inner--hidden');
     }
   })
+
+  // $('.fixedBtn__inner').on('mouseleave', function(){
+  //   if( $(this).hasClass('fixedBtn__inner--open') ){
+  //     $('.fixedBtn__inner').removeClass('fixedBtn__inner--open');
+  //     $('.fixedBtn__inner').addClass('fixedBtn__inner--hidden');
+  //   }
+  // })
 
   // insights sticky
   if( $('#insights__card--sticky').length > 0 ){

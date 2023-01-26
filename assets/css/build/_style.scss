@@ -1984,29 +1984,29 @@ main {
   bottom: 0;
 }
 
-.fixedBtn__item+.fixedBtn__item{
-  margin-top: 6px;
+.fixedBtn__item{
+  margin-bottom: 6px;
 }
 
-.fixedBtn__normal{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  transition: transform 0.5s ease-out, visibility 0.5s ease-out, opacity 0.5s ease-out;
-}
+// .fixedBtn__normal{
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   opacity: 1;
+//   visibility: visible;
+//   transform: translateY(0);
+//   transition: transform 0.5s ease-out, visibility 0.5s ease-out, opacity 0.5s ease-out;
+// }
 
-.fixedBtn__inner--open{
+// .fixedBtn__inner--open{
 
-  .fixedBtn__normal{
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(100%);
-  }
-}
+//   .fixedBtn__normal{
+//     opacity: 0;
+//     visibility: hidden;
+//     transform: translateY(100%);
+//   }
+// }
 
 .fixedBtn__inner--hidden{
 
@@ -2021,7 +2021,7 @@ main {
   transform: translateY(0);
   visibility: visible;
   opacity: 1;
-  transition: transform 0.5s ease-out, visibility 0.5s ease-out, opacity 0.5s ease-out;
+  transition: transform 0.3s ease-out, visibility 0.3s ease-out, opacity 0.3s ease-out;
 }
 
 .logo-list__marquee {
