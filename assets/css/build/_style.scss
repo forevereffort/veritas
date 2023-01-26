@@ -2377,6 +2377,10 @@ main {
   color: #635651;
 }
 
+.single-article__title+.single-article__content{
+  margin-top: 80px;
+}
+
 .module-anchor-title{
 
   p{
@@ -2495,6 +2499,7 @@ main {
   }
   
   figcaption{
+    margin-top: 10px;
     font-size: pxToRem(14, 20);
     line-height: 1.4;
     letter-spacing: pxToRem(0.08, 20);
