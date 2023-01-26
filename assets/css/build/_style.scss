@@ -1812,6 +1812,10 @@ main {
 
   #gMap {
     height: 480px;
+
+    @include bp(maxMD){
+      height: 320px;
+    }
   }
 
   .formWrap {
