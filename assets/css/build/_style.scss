@@ -2027,6 +2027,7 @@ main {
   animation-delay: 0;
   animation-direction: normal;
   animation-play-state: running;
+  // animation-play-state: paused;
   display: flex;
   flex: 0 0 auto;
   flex-direction: row;
@@ -2044,8 +2045,8 @@ main {
 }
 
 .logo-list__item{
-  width: 300px;
-  margin-right: 20px;
+  // width: 300px;
+  margin-right: 100px;
   text-align: center;
   display: flex;
   align-items: center;
