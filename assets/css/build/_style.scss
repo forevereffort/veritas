@@ -2027,7 +2027,7 @@ main {
 .logo-list__marquee {
   margin-top: 30px;
   align-items: center;
-  animation: logoListScroll 140s linear 0s infinite;
+  animation: logoListScroll 120s linear 0s infinite;
   animation-delay: 0;
   animation-direction: normal;
   animation-play-state: running;
@@ -2037,6 +2037,10 @@ main {
   flex-direction: row;
   min-width: 100%;
   z-index: 1;
+
+  @include bp(maxSM){
+    animation-duration: 20s;
+  }
 }
 
 .logo-list__marquee--pause{
@@ -2065,12 +2069,8 @@ main {
     max-height: 30px;
   }
 
-  @include bp(maxMD){
-    width: 170px;
-
-    img{
-      max-height: 20px;
-    }
+  @include bp(maxSM){
+    margin-right: 50px;
   }
 }
 
