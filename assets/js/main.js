@@ -824,20 +824,30 @@ $(document).ready(function () {
     }
   });
 
-  // check default open at concerns.html
-  if( window.location.pathname === '/concerns.html' || window.location.pathname === '/treatments.html' ){
-    let defaultSection = window.location.hash.substr(1);
+  // check default open at concerns.html && treatments.html
+  // if( window.location.pathname === '/concerns.html' || window.location.pathname === '/treatments.html' ){
+  if( window.location.pathname.includes('/concerns.html') || window.location.pathname.includes('/treatments.html') ){
 
-    if( defaultSection !== '' ){
-      jQuery('.grid-list__group').addClass('grid-list__group--closed');
-      jQuery('.grid-list__group .grid-list__row').css({'display': 'none'});
-      jQuery('.grid-list__group[data-grid-cat="' + defaultSection + '"]').removeClass('grid-list__group--closed');
-      jQuery('.grid-list__group[data-grid-cat="' + defaultSection + '"] .grid-list__row').removeAttr('style');
+    function gridOpen(){
+      let defaultSection = window.location.hash.substr(1);
 
-      $('html, body').animate({
-        scrollTop: $('#' + defaultSection).offset().top
-      }, 500);
+      if( defaultSection !== '' ){
+        jQuery('.grid-list__group').addClass('grid-list__group--closed');
+        jQuery('.grid-list__group .grid-list__row').css({'display': 'none'});
+        jQuery('.grid-list__group[data-grid-cat="' + defaultSection + '"]').removeClass('grid-list__group--closed');
+        jQuery('.grid-list__group[data-grid-cat="' + defaultSection + '"] .grid-list__row').removeAttr('style');
+
+        $('html, body').animate({
+          scrollTop: $('#' + defaultSection).offset().top
+        }, 500);
+      }
     }
+
+    gridOpen();
+
+    window.addEventListener('hashchange', function(){
+      gridOpen();
+    });
   }
 
   $('.faq-list__title').on('click', function(){
