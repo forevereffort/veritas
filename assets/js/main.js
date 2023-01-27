@@ -825,6 +825,14 @@ $(document).ready(function () {
   });
 
   // check default open at concerns.html && treatments.html
+  $('div[data-subnavfor="Concerns"] h5 a, div[data-subnavfor="Treatments"] h5 a').on('click', function(){
+    closeSubNav();
+  });
+
+  $('nav[data-subnavfor="Concerns"] h5 a, nav[data-subnavfor="Treatments"] h5 a').on('click', function(){
+    closeMobNav();
+  });
+
   // if( window.location.pathname === '/concerns.html' || window.location.pathname === '/treatments.html' ){
   if( window.location.pathname.includes('/concerns.html') || window.location.pathname.includes('/treatments.html') ){
 
