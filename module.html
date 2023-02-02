@@ -25,6 +25,40 @@
 </head>
 
 <body>
+  <div class="fixedBtn">
+    <div class="g">
+      <div class="r">
+        <div class="lg-12">
+          <div class="fixedBtn__row">
+            <div class="fixedBtn__inner fixedBtn__inner--hidden">
+              <div class="fixedBtn__hover">
+                <div class="fixedBtn__item">
+                  <a href="#" class="buttonWithArrowStyling buttonWithArrowStyling_red">
+                    <p>Call us</p>
+                  </a>
+                </div>
+                <div class="fixedBtn__item">
+                  <a href="#" class="buttonWithArrowStyling buttonWithArrowStyling_red">
+                    <p>Whatsapp</p>
+                  </a>
+                </div>
+                <div class="fixedBtn__item">
+                  <a href="#" class="buttonWithArrowStyling buttonWithArrowStyling_red">
+                    <p>Contact form</p>
+                  </a>
+                </div>
+              </div>
+              <div class="fixedBtn__normal">
+                <div class="buttonWithArrowStyling buttonWithArrowStyling_red">
+                  <p>Get in touch</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <header>
     <div class="headerWrap">
       <div class="mainNavWrap">
@@ -409,10 +443,10 @@
             </p>
           </div>
         </div>
-        <div class="lg-8 md-10">
+        <div class="lg-11 md-10">
           <div class="formWrap">
             <form class="searchNav" action="search.html">
-              <input class="searchInput" type="text" name="searchStrings" placeholder="Hello World" />
+              <input class="searchInput" type="text" name="searchStrings" placeholder="Type here" />
               <label class="searchIcon hoverEffect_dim">
                 <input type="submit" />
                 <svg class="searchBtn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -423,6 +457,27 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  
+  <div class="module-secondaryHeader module-secondaryHeader__withMobAnchorStyling">
+    <div class="g">
+      <div class="r">
+        <div class="md-12">
+          <div class="secondaryHeaderWrap">
+            <div class="navWrapMobOverflow">
+              <div class="navWrapMob">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 11.115">
+                  <path id="Icon_material-keyboard-arrow-left" data-name="Icon material-keyboard-arrow-left" d="M23.115,24.135l-6.87-6.885,6.87-6.885L21,8.25l-9,9,9,9Z" transform="translate(-8.25 23.115) rotate(-90)" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="progressBar">
+      <div class="bar"></div>
     </div>
   </div>
 
@@ -438,11 +493,17 @@
       </div>
     </div>
 
-    <div class="g">
+    <div class="module-singleArticleBodyWithSideNav">
+   		<div class="g">
         <div class="r">
-            <div class="mdlg-offset-3 mdlg-7">
-                <div class="module-section module-anchor-title">
-                    <p class="s">ANCHOR TITLE (optional)</p>
+		    <div class="mdlg-3">
+              <div class="sticky">
+                <div class="sideNavWrap"></div>
+              </div>
+            </div>
+            <div class="mdlg-7">
+                <div class="module-section module-anchor-title" id="anchor-title" data-anchorId="anchor-title" data-anchorTitle="Anchor Title" >
+                    <h5>ANCHOR TITLE (optional)</h5>
                     <h3>Section title (optional)</h3>
                 </div>
                 <div class="module-section module-content">
@@ -460,12 +521,12 @@
                     <p>First, correct diagnosis is most important — so make sure you get that out of the way before doing anything else. </p>
                     <p>At home, I recommend the following:</p>
                     <ul>
-                        <li>Fat reduction<br/>Patients can expect to see up to 27% fat freeze reduction around target areas.</li>
-                        <li>Minimal pain and side effects<br/>a tingling sensation during the surgery, numbness, and swelling may occur but are temporary.</li>
-                        <li>Non-invasive/non surgical procedure<br/>No need for painful surgery or incisions to be made.</li>
-                        <li>No downtime<br/>Patients are able to return to their daily routines after treatment.</li>
-                        <li>Quick<br/>One session is done in approximately an hour or less, depending on the number of treated areas.</li>
-                        <li>Safe<br/>The procedure is US FDA approved. It also leaves the surrounding tissues undamaged during the procedure.</li>
+                        <li><strong>Fat reduction</strong><br/>Patients can expect to see up to 27% fat freeze reduction around target areas.</li>
+                        <li><strong>Minimal pain and side effects</strong><br/>a tingling sensation during the surgery, numbness, and swelling may occur but are temporary.</li>
+                        <li><strong>Non-invasive/non surgical procedure</strong><br/>No need for painful surgery or incisions to be made.</li>
+                        <li><strong>No downtime</strong><br/>Patients are able to return to their daily routines after treatment.</li>
+                        <li><strong>Quick</strong><br/>One session is done in approximately an hour or less, depending on the number of treated areas.</li>
+                        <li><strong>Safe</strong><br/>The procedure is US FDA approved. It also leaves the surrounding tissues undamaged during the procedure.</li>
                     </ul>
                 </div>
                 <div class="module-section module-2-col-list">
@@ -631,7 +692,7 @@
                                 </div>
                                 <div class="mdlg-6">
                                     <div class="module-2-col-img-txt__card-info">
-                                        <p>Dr Chua Cheng Yu</p>
+                                        <p><strong>Dr Chua Cheng Yu</strong></p>
                                         <ul>
                                             <li>Lorem ipsum dolor sit amet, consetetur sadipscing</li>
                                             <li>Sed diam nonumy eirmod tempor invidunt ut</li>
@@ -641,7 +702,7 @@
                                         </ul>
                                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
                                         <div class="module-2-col-img-txt__card-link">
-                                            <p><a href="#">Read more</a></p>
+                                            <p class="s reckless_neue_light"><a href="#" class="hoverEffect_dim">Read more</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -658,7 +719,7 @@
                                 </div>
                                 <div class="mdlg-6">
                                     <div class="module-2-col-img-txt__card-info">
-                                        <p>Dr Chua Cheng Yu</p>
+                                        <p><strong>Dr Chua Cheng Yu</strong></p>
                                         <ul>
                                             <li>Lorem ipsum dolor sit amet, consetetur sadipscing</li>
                                             <li>Sed diam nonumy eirmod tempor invidunt ut</li>
@@ -668,7 +729,7 @@
                                         </ul>
                                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
                                         <div class="module-2-col-img-txt__card-link">
-                                            <p><a href="#">Read more</a></p>
+                                            <p class="s reckless_neue_light"><a href="#" class="hoverEffect_dim">Read more</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -702,6 +763,7 @@
             </div>
         </div>
     </div>
+	</div>
 
     <div class="module-contactForm contactForm_withGreyBg">
       <div class="g">

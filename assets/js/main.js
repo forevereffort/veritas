@@ -615,7 +615,8 @@ $(document).ready(function () {
       invalidateOnRefresh: true,
       start: "50% 50%",
       endTrigger: ".module-singleArticleBodyWithSideNav + .module-faq",
-      end: "bottom bottom",
+      // end: "bottom bottom",
+      end: "top bottom",
     });
   }
 
@@ -663,12 +664,12 @@ $(document).ready(function () {
       });
 
       owl2ColImgTextOwl.on('touchend mouseup', function (e) {
-        tlCounter.play();              
+        tlCounter.play();
       });
 
       function startCountingAnim(i) {
         var dur = 7;
-        
+
         gsap.set($($owlCustomTimedDots).find('.dot span'), { clearProps: "all" });
         tlCounter = gsap.timeline({
           onComplete: function () {
@@ -676,7 +677,7 @@ $(document).ready(function () {
           }
         });
         tlCounter.to($($owlCustomTimedDots).find('.dot'), 0.3, { width: dotSize, ease: "cubic_bezier" }, 0);
-        tlCounter.fromTo($($owlCustomTimedDots).find('.dot:nth-of-type(' + i + ') span'), { width: '0%' }, { width: '100%', duration: dur, ease: "linear"}, 0);
+        tlCounter.fromTo($($owlCustomTimedDots).find('.dot:nth-of-type(' + i + ') span'), { width: '0%' }, { width: '100%', duration: dur, ease: "linear" }, 0);
 
         $($owlCustomTimedDots).find('.dot').removeClass('active');
         $($owlCustomTimedDots).find('.dot:nth-of-type(' + i + ')').addClass('active');
@@ -688,7 +689,7 @@ $(document).ready(function () {
         }
       })
     });
-  }  
+  }
 
   // START - Tein added contact form functions 13Jan2023  
   // Textarea auto grow
@@ -743,8 +744,8 @@ $(document).ready(function () {
   // END Tein added 13Jan2023  
 
   // get in touch fixed button hover animation
-  $('.fixedBtn__normal').on('click', function(){
-    if( $('.fixedBtn__inner').hasClass('fixedBtn__inner--hidden') ){
+  $('.fixedBtn__normal').on('click', function () {
+    if ($('.fixedBtn__inner').hasClass('fixedBtn__inner--hidden')) {
       $('.fixedBtn__inner').removeClass('fixedBtn__inner--hidden');
       $('.fixedBtn__inner').addClass('fixedBtn__inner--open');
     } else {
@@ -761,24 +762,24 @@ $(document).ready(function () {
   // })
 
   // insights sticky
-  if( $('#insights__card--sticky').length > 0 ){
+  if ($('#insights__card--sticky').length > 0) {
     let p = $('#insights__card--sticky').offset();
 
-    $(window).on('resize', function(){
+    $(window).on('resize', function () {
       p = $('#insights__card--sticky').offset();
     });
 
     const offsetX = 30;
 
-    $(window).on('scroll', function(){
-      if( window.innerWidth > 1280 ){
+    $(window).on('scroll', function () {
+      if (window.innerWidth > 1280) {
         var w = $('#insights__card--sticky').parent().width();
         var h = $('#insights__card--sticky').height();
         var sh = $('#insights-section').height();
         var sp = $('#insights-section').offset()
 
-        if( $(window).scrollTop() + offsetX > p.top ){
-          if( $(window).scrollTop() + h > sh + sp.top ){
+        if ($(window).scrollTop() + offsetX > p.top) {
+          if ($(window).scrollTop() + h > sh + sp.top) {
             $('#insights__card--sticky').css({
               "position": "absolute",
               "top": 'auto',
@@ -803,63 +804,67 @@ $(document).ready(function () {
   }
 
   //logo list hover stop
-  $('.logo-list__item a').on('mouseenter', function(){
+  $('.logo-list__item a').on('mouseenter', function () {
     $('.logo-list__marquee').addClass('logo-list__marquee--pause');
-  }).on('mouseleave', function(){
+  }).on('mouseleave', function () {
     $('.logo-list__marquee').removeClass('logo-list__marquee--pause');
   })
 
   //collapse
-  $('.grid-list__tite h2').on('click', function(){
-    if( window.innerWidth > 834 ){
+  $('.grid-list__tite h2').on('click', function () {
       let pElem = $(this).parent().parent();
-
-      if( $(pElem).hasClass('grid-list__group--closed') ){
+      if ($(pElem).hasClass('grid-list__group--closed')) {
         $(pElem).removeClass('grid-list__group--closed');
         $('.grid-list__row', pElem).slideDown();
       } else {
         $(pElem).addClass('grid-list__group--closed')
         $('.grid-list__row', pElem).slideUp();
       }
-    }
   });
 
   // check default open at concerns.html && treatments.html
-  $('div[data-subnavfor="Concerns"] h5 a, div[data-subnavfor="Treatments"] h5 a').on('click', function(){
+  $('div[data-subnavfor="Concerns"] h5 a, div[data-subnavfor="Treatments"] h5 a').on('click', function () {
     closeSubNav();
   });
 
-  $('nav[data-subnavfor="Concerns"] h5 a, nav[data-subnavfor="Treatments"] h5 a').on('click', function(){
+  $('nav[data-subnavfor="Concerns"] h5 a, nav[data-subnavfor="Treatments"] h5 a').on('click', function () {
     closeMobNav();
   });
 
   // if( window.location.pathname === '/concerns.html' || window.location.pathname === '/treatments.html' ){
-  if( window.location.pathname.includes('/concerns.html') || window.location.pathname.includes('/treatments.html') ){
+  if (window.location.pathname.includes('/concerns.html') || window.location.pathname.includes('/treatments.html')) {
 
-    function gridOpen(){
+    function gridOpen() {
       let defaultSection = window.location.hash.substr(1);
-
-      if( defaultSection !== '' ){
+      if (defaultSection !== '') {
         jQuery('.grid-list__group').addClass('grid-list__group--closed');
-        jQuery('.grid-list__group .grid-list__row').css({'display': 'none'});
+        jQuery('.grid-list__group .grid-list__row').css({ 'display': 'none' });
         jQuery('.grid-list__group[data-grid-cat="' + defaultSection + '"]').removeClass('grid-list__group--closed');
         jQuery('.grid-list__group[data-grid-cat="' + defaultSection + '"] .grid-list__row').removeAttr('style');
 
         $('html, body').animate({
           scrollTop: $('#' + defaultSection).offset().top
         }, 500);
+      } else {
+        if (maxMD()) {
+          jQuery('.grid-list__group').addClass('grid-list__group--closed');
+          jQuery('.grid-list__group .grid-list__row').css({ 'display': 'none' });
+
+          jQuery('.grid-list__group:first-child()').removeClass('grid-list__group--closed');
+          jQuery('.grid-list__group:first-child() .grid-list__row').removeAttr('style');          
+        }
       }
     }
 
     gridOpen();
 
-    window.addEventListener('hashchange', function(){
+    window.addEventListener('hashchange', function () {
       gridOpen();
     });
   }
 
-  $('.faq-list__title').on('click', function(){
-    if( $(this).hasClass('open') ){
+  $('.faq-list__title').on('click', function () {
+    if ($(this).hasClass('open')) {
       $('.faq-list__txt', $(this).parent()).slideUp();
       $(this).removeClass('open')
     } else {
